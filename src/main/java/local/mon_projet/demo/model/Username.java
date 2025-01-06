@@ -8,13 +8,13 @@ public class Username {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PersonID")
+    @Column(name = "PersonID") // Correspond exactement à la colonne dans MySQL
     private Long personID;
 
-    @Column(name = "LastName")
+    @Column(name = "LastName") // Correspond exactement à la colonne dans MySQL
     private String lastName;
 
-    @Column(name = "FirstName")
+    @Column(name = "FirstName") // Correspond exactement à la colonne dans MySQL
     private String firstName;
 
     // Getters et Setters
