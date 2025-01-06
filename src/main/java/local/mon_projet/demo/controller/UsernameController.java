@@ -1,24 +1,23 @@
 package local.mon_projet.demo.controller;
 
-import local.mon_projet.demo.entity.Username;
-import local.mon_projet.demo.repository.UsernameRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.List;
+import local.mon_projet.demo.repository.UsernameRepository;
 
 @Controller
 public class UsernameController {
 
-    @Autowired
-    private UsernameRepository usernameRepository;
+    private final UsernameRepository usernameRepository;
+
+    public UsernameController(UsernameRepository usernameRepository) {
+        this.usernameRepository = usernameRepository;
+    }
 
     @GetMapping("/")
     public String getUsernames(Model model) {
-        List<Username> usernames = usernameRepository.findAll();
-        model.addAttribute("usernames", usernames);
+        model.addAttribute("usernames", usernameRepository.findAll());
         return "index";
     }
 }
