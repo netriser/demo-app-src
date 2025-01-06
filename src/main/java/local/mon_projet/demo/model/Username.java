@@ -3,18 +3,18 @@ package local.mon_projet.demo.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "username")
+@Table(name = "username") // Correspond au nom de la table dans MySQL
 public class Username {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PersonID") // Correspond exactement à la colonne dans MySQL
+    @Column(name = "PersonID") // Correspond exactement à la colonne dans la base
     private Long personID;
 
-    @Column(name = "LastName") // Correspond exactement à la colonne dans MySQL
+    @Column(name = "LastName") // Correspond exactement à la colonne dans la base
     private String lastName;
 
-    @Column(name = "FirstName") // Correspond exactement à la colonne dans MySQL
+    @Column(name = "FirstName") // Correspond exactement à la colonne dans la base
     private String firstName;
 
     // Getters et Setters
