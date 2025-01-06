@@ -1,4 +1,4 @@
-package local.mon.projet.demo.entity;
+package local.mon_projet.demo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

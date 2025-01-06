@@ -1,7 +1,7 @@
-package local.mon.projet.demo.controller;
+package local.mon_projet.demo.controller;
 
-import local.mon.projet.demo.entity.Username;
-import local.mon.projet.demo.repository.UsernameRepository;
+import local.mon_projet.demo.entity.Username;
+import local.mon_projet.demo.repository.UsernameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
