@@ -2,19 +2,19 @@ package local.mon_projet.demo.model;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "username") // Correspond au nom de la table dans MySQL
+@Entity(name = "Username") // Nom unique pour cette entité
+@Table(name = "username")  // Nom de la table dans MySQL
 public class Username {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PersonID") // Correspond exactement à la colonne dans la base
+    @Column(name = "PersonID") // Colonne exacte dans la base
     private Long personID;
 
-    @Column(name = "LastName") // Correspond exactement à la colonne dans la base
+    @Column(name = "LastName") // Colonne exacte dans la base
     private String lastName;
 
-    @Column(name = "FirstName") // Correspond exactement à la colonne dans la base
+    @Column(name = "FirstName") // Colonne exacte dans la base
     private String firstName;
 
     // Getters et Setters
