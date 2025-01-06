@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Liste des utilisateurs</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Liste des utilisateurs</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>PersonID</th>
+                    <th>LastName</th>
+                    <th>FirstName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user : ${usernames}">
+                    <td th:text="${user.personId}"></td>
+                    <td th:text="${user.lastName}"></td>
+                    <td th:text="${user.firstName}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
